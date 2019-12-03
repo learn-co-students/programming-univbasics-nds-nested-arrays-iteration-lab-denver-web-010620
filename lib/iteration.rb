@@ -6,12 +6,31 @@ def join_ingredients(src)
   #
   # "I love (inner array element 0) and (inner array element 1) on my pizza""
   # As such, there should be a new String for each inner array, or pair
+  row = 0
+  while row < src.length do
+   puts "I love #{arraysrc[row][0]} and #{src[row][1]} on my pizza"
+   row += 1
+  end
+
+end
+  
 end
 
 def find_greater_pair(src)
   # src will be an array of [ [number1, number2], ... [numberN, numberM] ]
   # Produce a new Array that contains the larger number of each of the pairs
   # that are in the inner Arrays
+  row = 0 
+greater_array = []
+while row < array_2.length do
+    if array_2[row][0] > array_2[row][1] 
+        greater_array[row] = array_2[row][0]
+    else
+        greater_array[row] = array_2[row][1]
+    end
+    row += 1
+end
+puts greater_array
 end
 
 def total_even_pairs(src)

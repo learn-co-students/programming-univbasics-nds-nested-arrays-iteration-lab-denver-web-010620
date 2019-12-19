@@ -1,6 +1,7 @@
 require "pry"
 
 def join_ingredients(src)
+  binding.pry
  src = array_1
   new_array = {}
   "I love [:array_1][0][0] and [array_1][0][1] on my pizza"

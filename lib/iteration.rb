@@ -1,35 +1,37 @@
 require "pry"
 
 def join_ingredients(src)
-  binding.pry
- src = array_1
-  new_array = {}
-  "I love [:array_1][0][0] and [array_1][0][1] on my pizza"
-  return
-  
-  
-  
-  # Given an Array of 2-element Arrays ( [ [food1, food2], [food3, # food4]....[foodN, foodM]]):
-  #
-  # Build a new Array that contains strings where each pair of foods is
-  # inserted into this template:
-  #
-  # "I love (inner array element 0) and (inner array element 1) on my pizza""
-  # As such, there should be a new String for each inner array, or pair
+  new_array = []
+    index = 0
+      while index < src.count do 
+       
+  string = "I love #{src[index][0]} and #{src[index][1]} on my pizza"
+     new_array.push(string)
+         index+=1
+        end
+      new_array
+    end
+
+def find_greater_pair(array_2)
+  new_array = []
+    array_2.each do |element|
+     
+        if element[0] < element[1]
+           new_array.push(element[1])
+        else
+          new_array.push(element[0])
+        end
+     end
+  new_array
 end
 
-def find_greater_pair(src)
-  # src will be an array of [ [number1, number2], ... [numberN, numberM] ]
-  # Produce a new Array that contains the larger number of each of the pairs
-  # that are in the inner Arrays
-end
-
-def total_even_pairs(src)
-  # src will be an array of [ [number1, number2], ... [numberN, numberM] ]
-  # if both numbers in the pair are even, then add both those numbers to the
-  # total
-  #
-  # As a reminder any number % 2 will return 0 or 1. If the result is 0, then
-  # the number was even. Review the operator documentation if you've forgotten
-  # this!
+def total_even_pairs(array_3)
+   total = 0
+    array_3.each do |arrayness|
+    if  arrayness[0] %  2 == 0 &&
+          arrayness[1] % 2 == 0
+            total += arrayness[0] + arrayness[1]
+      end
+    end
+  total
 end
